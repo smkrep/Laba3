@@ -9,9 +9,11 @@ public:
 
 	List& operator=(const List& rhs);
 
-	bool isEmpty();
+	bool isEmpty() const;
 	void push(const int& val);
 	void pop(const int& val);
+	void print();
+	void clear();
 
 
 private: 
@@ -30,5 +32,6 @@ private:
 	};
 
 	Node* head = nullptr;
+	Node* lastAddedNode = nullptr;
 
 };
