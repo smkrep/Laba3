@@ -5,7 +5,7 @@ class List {
 public:
 	List() = default;
 	List(const List& copy);
-	~List();
+	~List() = default;
 
 	List& operator=(const List& rhs);
 

@@ -18,3 +18,13 @@ void List::push(const int& val) {
 		lastAddedNode = newnode;
 	}
 }
+
+void List::print() {
+	Node* ptr = head;
+	while (ptr != nullptr)
+	{
+		std::cout << ptr->data << " ";
+		ptr = ptr->next;
+	}
+	std::cout << "\n";
+}
