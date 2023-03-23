@@ -1,0 +1,20 @@
+#include "list.h"
+
+bool List::isEmpty() const
+{
+	return head == nullptr;
+}
+
+void List::push(const int& val) {
+	if (isEmpty()) {
+		head = new Node(val);
+		lastAddedNode = head;
+		return;
+	}
+	else {
+		Node* newnode = new Node(val);
+		lastAddedNode->next = newnode;
+		newnode->prev = lastAddedNode;
+		lastAddedNode = newnode;
+	}
+}
