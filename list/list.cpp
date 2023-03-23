@@ -19,7 +19,7 @@ void List::push(const int& val) {
 	}
 }
 
-void List::print() {
+void List::print() const {
 	Node* ptr = head;
 	while (ptr != nullptr)
 	{
