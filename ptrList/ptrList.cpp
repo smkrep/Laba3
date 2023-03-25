@@ -1,4 +1,4 @@
-#include "list.h"
+#include "ptrList.h"
 
 bool List::isEmpty() const
 {
@@ -28,3 +28,5 @@ void List::print() const {
 	}
 	std::cout << "\n";
 }
+
+

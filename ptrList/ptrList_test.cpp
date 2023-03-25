@@ -1,4 +1,4 @@
-#include "list.h"
+#include "ptrList.h"
 
 
 int main() {
