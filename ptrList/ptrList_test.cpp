@@ -3,7 +3,8 @@
 
 int main() {
 
-	List list;
+	std::vector<int> vec = { 1, 5, 7, 8 };
+	List list(vec);
 	list.push(2);
 	list.print();
 	list.push(4);
@@ -18,6 +19,6 @@ int main() {
 	list.print();
 	list.pop(3);
 	list.print();
-	list.push(348);
+	list.push(1337);
 	list.print();
 }

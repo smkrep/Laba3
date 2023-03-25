@@ -1,10 +1,12 @@
 #include <iostream>
+#include <vector>
 
 
 class List {
 public:
 	List() = default;
 	List(const List& copy);
+	List(const std::vector<int>& values);
 	~List() = default;
 
 	List& operator=(const List& rhs);

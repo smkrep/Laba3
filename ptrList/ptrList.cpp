@@ -46,11 +46,17 @@ void List::pop(const int& val) {
 				onDelete = ptr;
 
 				if(ptr->next != nullptr)ptr->next->prev = ptr->prev;
-				if (ptr->prev != nullptr) ptr->prev->next = ptr->next;
-				else head = ptr->next;
+				if (ptr->prev != nullptr) {
+					ptr->prev->next = ptr->next;
+					lastAddedNode = ptr->prev;
+				}
+				else {
+					head = ptr->next;
+					lastAddedNode = head;
+				}
 				
 				delete onDelete;
-				std::cout << "Item popped successfully\n";
+				std::cout << "Item " << val << " popped successfully\n";
 				return;
 			}
 			else {
@@ -60,4 +66,12 @@ void List::pop(const int& val) {
 		std::cout << "Error! No such item in the list\n";
 	}
 }
+
+List::List(const std::vector<int>& values) {
+	for (int i = 0; i < values.size(); i++) {
+		this->push(values[i]);
+	}
+	std::cout << "Constructed with vector\n";
+}
+
 
