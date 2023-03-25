@@ -13,7 +13,6 @@ public:
 	void push(const int& val);
 	void pop(const int& val);
 	void print() const;
-	void clear();
 
 
 private: 
