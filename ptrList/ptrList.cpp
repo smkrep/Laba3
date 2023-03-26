@@ -77,6 +77,7 @@ List::List(const std::vector<int>& values) {
 
 void List::clear() {
 	
+	if (this->isEmpty()) return;
 
 	while (lastAddedNode->prev != nullptr) {
 		lastAddedNode = lastAddedNode->prev;
