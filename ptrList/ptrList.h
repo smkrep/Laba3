@@ -13,7 +13,7 @@ public:
 
 	bool isEmpty() const;
 	void push(const int& val);
-	void pop(const int& val);
+	void remove(const int& val);
 	void print() const;
 
 

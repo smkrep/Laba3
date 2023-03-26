@@ -33,7 +33,7 @@ void List::print() const {
 	std::cout << "\n";
 }
 
-void List::pop(const int& val) {
+void List::remove(const int& val) {
 	if (isEmpty()) {
 		std::cout << "Error! The list is already empty!\n";
 		return;
@@ -46,6 +46,7 @@ void List::pop(const int& val) {
 				onDelete = ptr;
 
 				if(ptr->next != nullptr)ptr->next->prev = ptr->prev;
+
 				if (ptr->prev != nullptr) {
 					ptr->prev->next = ptr->next;
 					lastAddedNode = ptr->prev;
