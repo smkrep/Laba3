@@ -47,6 +47,11 @@ int main() {
 	list1 = list2;
 	std::cout << "list1 after assigning: ";
 	list1.print();
+	std::cout << "..................CREATING list3 VIA list2..................\n\n";
+	List list3(list2);
+	std::cout << "list3: ";
+	list3.print();
+
 
 
 }
