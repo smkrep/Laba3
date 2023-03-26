@@ -106,4 +106,8 @@ List& List::operator=(const List& rhs) {
 
 }
 
+List::List(const List& copy) {
+	*this = copy;
+}
+
 
