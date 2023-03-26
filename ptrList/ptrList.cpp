@@ -111,4 +111,7 @@ List::List(const List& copy) {
 	*this = copy;
 }
 
+List::~List() {
+	this->clear();
+}
 

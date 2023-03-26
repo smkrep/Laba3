@@ -7,7 +7,7 @@ public:
 	List() = default;
 	List(const List& copy);
 	List(const std::vector<int>& values);
-	~List() = default;
+	~List();
 
 	List& operator=(const List& rhs);
 
