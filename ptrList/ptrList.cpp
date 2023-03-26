@@ -84,8 +84,26 @@ void List::clear() {
 		Node* onDelete = lastAddedNode->next;
 		delete onDelete;
 	}
+
 	delete lastAddedNode;
 	head = nullptr;
+}
+
+List& List::operator=(const List& rhs) {
+
+	this->clear();
+
+	if (rhs.isEmpty()) {
+		return *this;
+	}
+	
+	Node* tmp = rhs.head;
+	while (tmp != nullptr) {
+		this->push(tmp->data);
+		tmp = tmp->next;
+	}
+	return *this;
+
 }
 
 

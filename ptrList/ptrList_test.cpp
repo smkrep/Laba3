@@ -4,12 +4,11 @@
 int main() {
 
 	std::vector<int> vec = { 1, 5, 7, 8 };
+	std::vector<int> vec2 = { 134, 5, 7, 8 };
 	
-
+	List list;
 	std::cout << "..................STARTING TESTS..................\n\n";
-	std::cout << "..................CREATING WITH A VECTOR {1, 5, 7, 8}..................\n\n";
-	List list(vec);
-	list.print();
+	
 	std::cout << "..................PUSH 2..................\n\n";
 	list.push(2);
 	list.print();
@@ -33,6 +32,7 @@ int main() {
 	std::cout << "..................PUSH 1337..................\n\n";
 	list.push(1337);
 	list.print();
-	list.clear();
-	list.print();
+	std::cout << "..................CREATING WITH A VECTOR {1, 5, 7, 8}..................\n\n";
+	List list1(vec);
+
 }
