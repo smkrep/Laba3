@@ -9,6 +9,7 @@ void List::push(const int& val) {
 	if (isEmpty()) {
 		head = new Node(val);
 		lastAddedNode = head;
+		size_++;
 		return;
 	}
 	else {
@@ -16,6 +17,7 @@ void List::push(const int& val) {
 		lastAddedNode->next = newnode;
 		newnode->prev = lastAddedNode;
 		lastAddedNode = newnode;
+		size_++;
 	}
 }
 
@@ -58,6 +60,7 @@ void List::remove(const int& val) {
 				
 				delete onDelete;
 				std::cout << "Item " << val << " removed successfully\n";
+				size_--;
 				return;
 			}
 			else {
@@ -88,6 +91,7 @@ void List::clear() {
 
 	delete lastAddedNode;
 	head = nullptr;
+	size_ = 0;
 }
 
 List& List::operator=(const List& rhs) {
@@ -113,5 +117,9 @@ List::List(const List& copy) {
 
 List::~List() {
 	this->clear();
+}
+
+size_t List::size() const {
+	return this->size_;
 }
 

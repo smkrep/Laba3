@@ -16,6 +16,7 @@ public:
 	void remove(const int& val);
 	void print() const;
 	void clear();
+	size_t size() const;
 
 
 private: 
@@ -35,5 +36,5 @@ private:
 
 	Node* head = nullptr;
 	Node* lastAddedNode = nullptr;
-
+	size_t size_ = 0;
 };
