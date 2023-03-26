@@ -51,6 +51,7 @@ int main() {
 	List list3(list2);
 	std::cout << "list3: ";
 	list3.print();
+	std::cout <<"list3 size: " << list3.size();
 
 
 
