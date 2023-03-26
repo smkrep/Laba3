@@ -75,4 +75,17 @@ List::List(const std::vector<int>& values) {
 	std::cout << "Constructed with vector\n";
 }
 
+void List::clear() {
+	
+
+	while (lastAddedNode->prev != nullptr) {
+		lastAddedNode = lastAddedNode->prev;
+		
+		Node* onDelete = lastAddedNode->next;
+		delete onDelete;
+	}
+	delete lastAddedNode;
+	head = nullptr;
+}
+
 

@@ -33,4 +33,6 @@ int main() {
 	std::cout << "..................PUSH 1337..................\n\n";
 	list.push(1337);
 	list.print();
+	list.clear();
+	list.print();
 }

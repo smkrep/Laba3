@@ -15,6 +15,7 @@ public:
 	void push(const int& val);
 	void remove(const int& val);
 	void print() const;
+	void clear();
 
 
 private: 
