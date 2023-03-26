@@ -57,7 +57,7 @@ void List::remove(const int& val) {
 				}
 				
 				delete onDelete;
-				std::cout << "Item " << val << " popped successfully\n";
+				std::cout << "Item " << val << " removed successfully\n";
 				return;
 			}
 			else {
