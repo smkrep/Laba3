@@ -13,7 +13,7 @@ public:
 	bool isEmpty();
 	void push(const int& val);
 	std::vector<int>::const_iterator find(const int& val) const;
-	void pop(const int& val);
+	void remove(const int& val);
 	void print() const;
 	size_t size();
 private:

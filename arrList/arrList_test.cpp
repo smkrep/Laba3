@@ -13,8 +13,8 @@ int main() {
 	a.push(8);
 	std::cout << "Push 8 in list a:\n";
 	a.print();
-	a.pop(2);
-	std::cout << "Pop 2 from list a:\n";
+	a.remove(2);
+	std::cout << "Remove 2 from list a:\n";
 	a.print();
 	std::cout << "Size of list a: " << a.size() << "\n\n\n\n\n";
 }

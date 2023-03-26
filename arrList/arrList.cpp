@@ -25,7 +25,7 @@ std::vector<int>::const_iterator aList::find(const int& val) const {
 	return std::find(data.begin(), data.end(), val);
 }
 
-void aList::pop(const int& val) {
+void aList::remove(const int& val) {
 	data.erase(std::find(data.begin(), data.end(), val));
 }
 
