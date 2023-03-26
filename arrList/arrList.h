@@ -1,18 +1,23 @@
 #include <iostream>
 #include <vector>
+#include <algorithm> 
 
-class Stack {
+class aList {
 public:
 
-	Stack();
-	Stack(const Stack& copy);
-	~Stack();
-	Stack& operator=(const Stack& rhs);
+	aList() = default;
+	aList(const std::vector<int>& val);
+	aList(const aList& copy);
+	~aList() = default;
+	aList& operator=(const aList& rhs);
 	bool isEmpty();
 	void push(const int& val);
-	void pop();
-	int top();
-
+	std::vector<int>::const_iterator find(const int& val) const;
+	void pop(const int& val);
+	void print() const;
+	size_t size();
 private:
+	std::vector<int> data;
 
 };
+
